@@ -136,8 +136,32 @@ const handler = initializeMcpApiHandler(
   {
     capabilities: {
       tools: {
-        echo: {
-          description: "Echo a message",
+        "get-token-price": {
+          description: "Get the price of a token in mantle network",
+          parameters: {
+            contract_address: { type: "string" },
+          },
+        },
+        "get-ltv": {
+          description: "Get the total value locked of mantle network",
+          parameters: {},
+        },
+        "get-protocol-merchant-moe-summary": {
+          description:
+            "Get key metrics for the Merchant Moe protocol on Mantle",
+          parameters: {},
+        },
+        "get-protocol-treehouse-protocol-summary": {
+          description: "Get key metrics for a Tree House on Mantle",
+          parameters: {},
+        },
+        "get-USDT-tvl": {
+          description: "Get the total value locked of USDT on Mantle",
+          parameters: {},
+        },
+        "get-USDC-tvl": {
+          description: "Get the total value locked of USDC on Mantle",
+          parameters: {},
         },
       },
     },
