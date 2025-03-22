@@ -14,8 +14,6 @@ const handler = initializeMcpApiHandler(
       async ({ address }) => {
         const price = await getTokenPrice(address);
 
-        console.log(price);
-
         return {
           content: [{ type: "text", text: `Price: ${price}` }],
         };

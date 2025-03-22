@@ -15,7 +15,17 @@ async function main() {
       capabilities: {
         prompts: {},
         resources: {},
-        tools: {},
+        tools: {
+          token_prices: {
+            description: "Get the price of a token",
+            parameters: {
+              address: {
+                type: "string",
+                description: "The address of the token",
+              },
+            },
+          },
+        },
       },
     }
   );
@@ -26,6 +36,11 @@ async function main() {
 
   const result = await client.listTools();
   console.log(result);
+
+  const price = await client.callTool("token_prices", {
+    address: "0x09Bc4E0D864854c6aFB6eB9A9cdF58aC190D0dF9",
+  });
+  console.log(price);
 }
 
 main();
