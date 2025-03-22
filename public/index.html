@@ -288,15 +288,12 @@
           class="text-sm bg-[#0A0A0A] rounded-2xl p-6 overflow-x-auto font-mono relative"
         >
 <code class="text-gray-300">{
-  "endpoint": "https://mcp.yourdomain.com",
-  "version": "1.0.0",
-  "config": {
-    "chainId": "mantle-1",
-    "contextSize": 8192,
-    "historyDepth": "30d"
-  },
-  "auth": {
-    "apiKey": "YOUR_API_KEY"
+  "mcpServers": {
+    "onchain-context": {
+      "type": "remote",
+      "url": "https://onchain-beryl.vercel.app/sse",
+      "supportsStreaming": true
+    }
   }
 }</code></pre>
       </div>
